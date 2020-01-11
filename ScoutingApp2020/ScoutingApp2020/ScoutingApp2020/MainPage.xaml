@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="ScoutingApp2019.MainPage"
+            x:Name="MainTabbedPage"
+            Title="Scouting App 2019"
+            BackgroundColor="Black"
+            BarTextColor="White"
+            CurrentPageChanged="MainTabbedPage_CurrentPageChanged">
+
+    <ContentPage Title="Start" Padding="10" TabIndex="0">
+
+        <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+    </ContentPage>
+
+    <ContentPage Title="Auto" Padding="10" TabIndex="1">
+
+    </ContentPage>
+    <ContentPage Title=" Tele" Padding="10" TabIndex="2">
+
+    </ContentPage>
+    <ContentPage Title="EndGame" Padding="10" TabIndex="3">
+
+    </ContentPage>
+</TabbedPage>
