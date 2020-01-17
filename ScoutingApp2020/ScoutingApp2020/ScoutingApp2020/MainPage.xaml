@@ -11,8 +11,8 @@
     <ContentPage Title="Start" Padding="10" TabIndex="0">
 
         <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+       
+        <Label Text="Sairam is God" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
         </StackLayout>
