@@ -9,12 +9,66 @@
             CurrentPageChanged="MainTabbedPage_CurrentPageChanged">
 
     <ContentPage Title="Start" Padding="10" TabIndex="0">
+        <StackLayout Margin="10">
+            <!--App Heading-->
+            <Label Text="Welcome to the Infinite Recharge Scouting App!"
+              TextColor="White"
+              FontSize="25"
+              HorizontalOptions="Start"
+              VerticalOptions="Start" />
 
-        <StackLayout>
-       
-        <Label Text="Sairam is God" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+            <!--Scout Name Text Field-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Scout Name:"
+                 TextColor="White"
+                 FontSize="Body"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Center"/>
+                <Entry x:Name="scoutNameEntry"
+                 BackgroundColor="White"
+                 FontSize="Body"
+                 Placeholder="                                   "/>
+            </StackLayout>
+
+            <!--Match Number Text Field-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Match Number:"
+                 TextColor="White"
+                 FontSize="Body"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Center"/>
+                <Entry x:Name="matchNoEntry"
+                 BackgroundColor="White"
+                 FontSize="Body"
+                 Placeholder="                              "/>
+            </StackLayout>
+
+            <!--Replay Match Toggle-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Replay Match?:"
+                 TextColor="White"
+                 FontSize="Body"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Center"/>
+                <Switch x:Name="teamNoEntry"
+                 ThumbColor="Red"
+                    Scale="0.75"
+                 OnColor="Lime"/>
+            </StackLayout>
+
+            <!--Team ID Text Field-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Team Number:"
+                 TextColor="White"
+                 FontSize="Body"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Center"/>
+                <Entry x:Name="teamNoEntry"
+                 BackgroundColor="White"
+                 FontSize="Body"
+                 Placeholder="                               "/>
+            </StackLayout>
+
         </StackLayout>
 
     </ContentPage>
