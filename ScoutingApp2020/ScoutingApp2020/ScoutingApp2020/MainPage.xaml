@@ -1,20 +1,150 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="ScoutingApp2019.MainPage"
+            x:Class="ScoutingApp2020.MainPage"
             x:Name="MainTabbedPage"
-            Title="Scouting App 2019"
+            Title="Scouting App 2020"
             BackgroundColor="Black"
             BarTextColor="White"
             CurrentPageChanged="MainTabbedPage_CurrentPageChanged">
 
     <ContentPage Title="Start" Padding="10" TabIndex="0">
-
         <StackLayout>
-       
-        <Label Text="Sairam is God" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+            <!--App Heading-->
+            <Label Text="Welcome to the Infinite Recharge Scouting App!"
+                    Margin="10"
+                    TextColor="White"
+                    FontSize="35"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start" />
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Margin="10">
+
+                    <!--Scout Name Text Field-->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Scout Name:"
+                           Margin="10"
+                        TextColor="White"
+                        FontSize="25"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"/>
+                        <Entry x:Name="scoutNameEntry"
+                        BackgroundColor="White"
+                        FontSize="25"
+                        WidthRequest="200"/>
+                    </StackLayout>
+
+                    <!--Match Number Text Field-->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Match Number:"
+                           Margin="10"
+                        TextColor="White"
+                        FontSize="25"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"/>
+                        <Entry x:Name="matchNoEntry"
+                        BackgroundColor="White"
+                        FontSize="25"
+                        WidthRequest="75"
+                        Keyboard="Numeric"
+                        MaxLength="3"/>
+                    </StackLayout>
+
+                    <!--Replay Match Toggle-->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Replay Match?:"
+                        Margin="10"
+                        TextColor="White"
+                        FontSize="25"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"/>
+                        <Switch x:Name="replayToggle"
+                        Margin="10"
+                        Scale="1"
+                        OnColor="Lime"/>
+                    </StackLayout>
+
+                    <!--Team ID Text Field-->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Team Number:"
+                        Margin="10"
+                        TextColor="White"
+                        FontSize="25"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"/>
+                        <Entry x:Name="teamNoEntry"
+                        BackgroundColor="White"
+                        FontSize="25"
+                        WidthRequest="130"
+                        Keyboard="Numeric"
+                        MaxLength="4"/>
+                    </StackLayout>
+
+                    <!--Alliance Color Text Field-->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Alliance Color:"
+                        Margin="10"
+                        TextColor="White"
+                        FontSize="25"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"/>
+                        <Picker x:Name="BreakdownPicker" WidthRequest="135" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+                            <Picker.Items>
+                                <x:String>Blue</x:String>
+                                <x:String>Red</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+
+                    <!--Start Position Text Field-->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Start Position:"
+                        Margin="10"
+                        TextColor="White"
+                        FontSize="25"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"/>
+                        <Entry x:Name="startPosEntry"
+                        BackgroundColor="White"
+                        FontSize="25"
+                        WidthRequest="75"
+                        Keyboard="Numeric"
+                        MaxLength="1"/>
+                    </StackLayout>
+
+                    <!--Num Balls Preloaded Text Field-->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Number Preloads:"
+                        Margin="10"
+                        TextColor="White"
+                        FontSize="25"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"/>
+                        <Entry x:Name="numPreloadsEntry"
+                        BackgroundColor="White"
+                        FontSize="25"
+                        WidthRequest="75"
+                        Keyboard="Numeric"
+                        MaxLength="1"/>
+
+                    </StackLayout>
+                    <Image Source="/Resources/drawable/logo.png" HorizontalOptions="Start" WidthRequest="300"/>
+                </StackLayout>
+
+
+
+                <StackLayout Margin="10">
+                    <Image Source="/Resources/drawable/fieldGrid.PNG" 
+                    HorizontalOptions="Start" 
+                    WidthRequest="800" 
+                     VerticalOptions="Center"/>
+
+                    <Label Text="*IMPORTANT*: If the robot is placed exactly over the center line, input 0 as 
+                       start position. Have a fantastic day."
+                       TextColor="White"
+                       FontSize="25"/>
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
 
     </ContentPage>
