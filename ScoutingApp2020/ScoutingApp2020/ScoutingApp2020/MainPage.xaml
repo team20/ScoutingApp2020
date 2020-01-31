@@ -150,6 +150,323 @@
     </ContentPage>
 
     <ContentPage Title="Auto" Padding="10" TabIndex="1">
+        <!-- Initiation is Aqua (i like aqua) and buttons are brown (auto tab is brown) you are welcome to change anything you like -->
+
+        <!-- Entire Page H -->
+        <StackLayout Orientation="Horizontal">
+
+            <!-- Left Buttons (Power Cells) -->
+            <StackLayout Orientation="Vertical">
+                <Label Margin="10"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical">
+
+                <!-- Spacing -->
+                <StackLayout Orientation="Horizontal">
+                    <Label/>
+                </StackLayout>
+
+                <!-- Initiation Check -->
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Initiation Line" 
+                       Margin="10"
+                       TextColor="White"
+                       FontSize="25"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"/>
+                    <Switch x:Name="initCross"
+                        Margin="10"
+                        Scale="1"
+                        OnColor="Aqua"/>
+                </StackLayout>
+
+                <!-- Spacing -->
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <Label/>
+                    <Label/>
+                </StackLayout>
+
+                <!-- Auto: Inner Port score -->
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Inner Port  "
+                       Margin="10"
+                       TextColor="White"
+                       FontSize="25"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"/>
+                    <Button x:Name="autoInnerMinus"
+                        Clicked="autoInnerMinus_Clicked"
+                        Text="-"
+                        Font="24"
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        TextColor="Black" 
+                        BorderColor="Brown" 
+                        BorderWidth="4"/>
+                    <Label Text="0" 
+                       x:Name="autoInner"  
+                       FontSize="24" 
+                       VerticalTextAlignment="Center" 
+                       TextColor="White"/>
+                    <Button x:Name="autoInnerPlus"
+                        Clicked="autoInnerPlus_Clicked"
+                        Text="+"
+                        Font="24"
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        TextColor="Black" 
+                        BorderColor="Brown" 
+                        BorderWidth="4"/>
+                </StackLayout>
+
+                <!-- Spacing -->
+                <StackLayout Orientation="Vertical" Spacing="75">
+                    <Label/>
+                    <Label/>
+                </StackLayout>
+
+                <!-- Auto: Outer Port score -->
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Outer Port "
+                       Margin="10"
+                       TextColor="White"
+                       FontSize="25"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"/>
+                    <Button x:Name="autoOuterMinus"
+                        Clicked="autoOuterMinus_Clicked"
+                        Text="-"
+                        Font="24"
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        TextColor="Black" 
+                        BorderColor="Brown" 
+                        BorderWidth="4"/>
+                    <Label Text="0" 
+                       x:Name="autoOuter"  
+                       FontSize="24" 
+                       VerticalTextAlignment="Center" 
+                       TextColor="White"/>
+                    <Button x:Name="autoOuterPlus"
+                        Clicked="autoOuterPlus_Clicked"
+                        Text="+"
+                        Font="24"
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        TextColor="Black" 
+                        BorderColor="Brown" 
+                        BorderWidth="4"/>
+                </StackLayout>
+
+                <!-- Spacing -->
+                <StackLayout Orientation="Vertical" Spacing="100">
+                    <Label/>
+                    <Label/>
+                </StackLayout>
+
+                <!-- Auto: Lower Port score -->
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Lower Port"
+                       Margin="10"
+                       TextColor="White"
+                       FontSize="25"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"/>
+                    <Button x:Name="autoLowerMinus"
+                        Clicked="autoLowerMinus_Clicked"
+                        Text="-"
+                        Font="24"
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        TextColor="Black" 
+                        BorderColor="Brown" 
+                        BorderWidth="4"/>
+                    <Label Text="0" 
+                       x:Name="autoLower"  
+                       FontSize="24" 
+                       VerticalTextAlignment="Center" 
+                       TextColor="White"/>
+                    <Button x:Name="autoLowerPlus"
+                        Clicked="autoLowerPlus_Clicked"
+                        Text="+"
+                        Font="24"
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        TextColor="Black" 
+                        BorderColor="Brown" 
+                        BorderWidth="4"/>
+                </StackLayout>
+
+            </StackLayout>
+
+            <!-- Spacing Data-Image -->
+            <StackLayout Orientation="Vertical">
+                <Label Margin="25"/>
+            </StackLayout>
+
+            <!-- Image w/ vert spacing -->
+            <StackLayout Orientation="Vertical" Spacing="30">
+                <Label/>
+                <Image Source="/Resources/drawable/power_port.png"
+                   HorizontalOptions="Start"
+                   HeightRequest="600"
+                   WidthRequest="600"/>
+            </StackLayout>
+
+            <!-- Spacing Image-Misc. -->
+            <StackLayout Orientation="Vertical">
+                <Label Margin="25"/>
+            </StackLayout>
+
+            <!-- Misc. Performance Right -->
+            <StackLayout Orientation="Vertical">
+
+                <!-- Spacing -->
+                <StackLayout Orientation="Vertical" Spacing="50">
+                    <Label/>
+                    <Label/>
+                </StackLayout>
+
+                <!-- Missed Label -->
+                <StackLayout Orientation="Horizontal">
+
+                    <!-- Spacing -->
+                    <StackLayout Orientation="Vertical">
+                        <Label Margin="4"/>
+                    </StackLayout>
+
+                    <!-- Label -->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Missed"
+                           Margin="10"
+                           TextColor="White"
+                           FontSize="25"
+                           HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+
+                </StackLayout>
+
+                <!-- Missed Buttons -->
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="autoMissedMinus"
+                        Clicked="autoMissedMinus_Clicked"
+                        Text="-"
+                        Font="24"
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        TextColor="Black" 
+                        BorderColor="Brown" 
+                        BorderWidth="4"/>
+                    <Label Text="0"
+                       x:Name="autoMissed"
+                       VerticalTextAlignment="Center"
+                       TextColor="White"
+                       Font="24"/>
+                    <Button x:Name="autoMissedPlus"
+                        Clicked="autoMissedPlus_Clicked"
+                        Text="+"
+                        Font="24"
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        TextColor="Black" 
+                        BorderColor="Brown" 
+                        BorderWidth="4"/>
+                </StackLayout>
+
+                <!-- Spacing -->
+                <StackLayout Orientation="Vertical" Spacing="30">
+                    <Label/>
+                    <Label/>
+                </StackLayout>
+
+                <!-- Dropped Label -->
+                <StackLayout Orientation="Horizontal">
+
+                    <!-- Spacing -->
+                    <StackLayout Orientation="Vertical"/>
+
+                    <!-- Label -->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Dropped"
+                           Margin="10"
+                           TextColor="White"
+                           FontSize="25"/>
+                    </StackLayout>
+
+                </StackLayout>
+
+                <!-- Dropped Buttons -->
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="autoDroppedMinus"
+                        Clicked="autoDroppedMinus_Clicked"
+                        Text="-"
+                        Font="24"
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        TextColor="Black" 
+                        BorderColor="Brown" 
+                        BorderWidth="4"/>
+                    <Label Text="0"
+                       x:Name="autoDropped"
+                       VerticalTextAlignment="Center"
+                       TextColor="White"
+                       Font="24"/>
+                    <Button x:Name="autoDroppedPlus"
+                        Clicked="autoDroppedPlus_Clicked"
+                        Text="+"
+                        Font="24"
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        TextColor="Black" 
+                        BorderColor="Brown" 
+                        BorderWidth="4"/>
+                </StackLayout>
+
+                <!-- Spacing -->
+                <StackLayout Orientation="Vertical" Spacing="30">
+                    <Label/>
+                    <Label/>
+                </StackLayout>
+
+                <!-- Collected Label -->
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Collected"
+                           Margin="10"
+                           TextColor="White"
+                           FontSize="25"/>
+                </StackLayout>
+
+                <!-- Collected Buttons -->
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="autoCollectedMinus"
+                        Clicked="autoCollectedMinus_Clicked"
+                        Text="-"
+                        Font="24"
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        TextColor="Black" 
+                        BorderColor="Brown" 
+                        BorderWidth="4"/>
+                    <Label Text="0"
+                       x:Name="autoCollected"
+                       VerticalTextAlignment="Center"
+                       TextColor="White"
+                       Font="24"/>
+                    <Button x:Name="autoCollectedPlus"
+                        Clicked="autoCollectedPlus_Clicked"
+                        Text="+"
+                        Font="24"
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        TextColor="Black" 
+                        BorderColor="Brown" 
+                        BorderWidth="4"/>
+                </StackLayout>
+
+            </StackLayout>
+
+        </StackLayout>
 
     </ContentPage>
     <ContentPage Title=" Tele" Padding="10" TabIndex="2">
