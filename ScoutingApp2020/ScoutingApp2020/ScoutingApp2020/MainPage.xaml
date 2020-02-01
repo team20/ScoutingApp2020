@@ -14,7 +14,7 @@
             <Label Text="Welcome to the Infinite Recharge Scouting App!"
                     Margin="10"
                     TextColor="White"
-                    FontSize="35"
+                    FontSize="35" 
                     HorizontalOptions="Start"
                     VerticalOptions="Start" />
             <StackLayout Orientation="Horizontal">
@@ -79,7 +79,6 @@
                         Keyboard="Numeric"
                         MaxLength="4"/>
                     </StackLayout>
-
                     <!--Alliance Color Text Field-->
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Alliance Color:"
@@ -156,6 +155,86 @@
 
     </ContentPage>
     <ContentPage Title="EndGame" Padding="10" TabIndex="3">
-        
+        <StackLayout Orientation="Vertical">
+            <!-- SECTOR UNO-->
+            <StackLayout Orientation="Horizontal">
+                <Picker Margin="10" WidthRequest="250" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
+                    <Picker.Items>
+                        <x:String>Park</x:String>
+                        <x:String>Climbed</x:String>
+                        <x:String>Did not Park/Climb</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Balanced ?" Margin="10" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Switch />
+            </StackLayout>
+            <!-- SECTOR DOS-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Assist ?" Margin="10" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Switch/>
+                <Label Text="Assisted ?" Margin="10" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Switch />
+            </StackLayout>
+            <!-- SECTOR TRES-->
+            <StackLayout Orientation="Horizontal">
+                <Picker WidthRequest="150" Margin="10" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
+                    <Picker.Items>
+                        <x:String>None</x:String>
+                        <x:String>Some</x:String>
+                        <x:String>A lot</x:String>
+                        <x:String>Whole Match</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker  WidthRequest="150" Margin="10" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
+                    <Picker.Items>
+                        <x:String>None</x:String>
+                        <x:String>Some</x:String>
+                        <x:String>A lot</x:String>
+                        <x:String>Whole Match</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <!-- SECTOR QUATRO-->
+            <StackLayout Orientation="Horizontal">
+                <Picker WidthRequest="150"  Margin="10" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
+                    <Picker.Items>
+                        <x:String>None</x:String>
+                        <x:String>Some</x:String>
+                        <x:String>A lot</x:String>
+                        <x:String>Whole Match</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Picker  WidthRequest="150" Margin="10" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
+                    <Picker.Items>
+                        <x:String>None</x:String>
+                        <x:String>Some</x:String>
+                        <x:String>A lot</x:String>
+                        <x:String>Whole Match</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <!-- SECTOR CINCO-->
+            <StackLayout Orientation="Horizontal">
+                <Picker  Margin="10" FontSize="25"  WidthRequest="275" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
+                    <Picker.Items>
+                        <x:String>None</x:String>
+                        <x:String>Field Error</x:String>
+                        <x:String>Rule Violation</x:String>
+                        <x:String>Mechanical Error</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+
+            <!-- FINAL SECTOR -->
+            <StackLayout Orientation="Horizontal">
+                <Entry BackgroundColor="White"
+                        FontSize="25"
+                        WidthRequest="275"
+                        MaxLength="50"
+                   />
+            </StackLayout>
+        </StackLayout>
     </ContentPage>
 </TabbedPage>
