@@ -195,7 +195,7 @@
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
                     <Button x:Name="autoInnerMinus"
-                        Clicked="autoInnerMinus_Clicked"
+                       
                         Text="-"
                         Font="24"
                         WidthRequest="50" 
@@ -209,7 +209,7 @@
                        VerticalTextAlignment="Center" 
                        TextColor="White"/>
                     <Button x:Name="autoInnerPlus"
-                        Clicked="autoInnerPlus_Clicked"
+                        
                         Text="+"
                         Font="24"
                         WidthRequest="50" 
@@ -234,7 +234,7 @@
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
                     <Button x:Name="autoOuterMinus"
-                        Clicked="autoOuterMinus_Clicked"
+                        
                         Text="-"
                         Font="24"
                         WidthRequest="50" 
@@ -248,7 +248,7 @@
                        VerticalTextAlignment="Center" 
                        TextColor="White"/>
                     <Button x:Name="autoOuterPlus"
-                        Clicked="autoOuterPlus_Clicked"
+                        
                         Text="+"
                         Font="24"
                         WidthRequest="50" 
@@ -273,7 +273,7 @@
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
                     <Button x:Name="autoLowerMinus"
-                        Clicked="autoLowerMinus_Clicked"
+                        
                         Text="-"
                         Font="24"
                         WidthRequest="50" 
@@ -287,7 +287,7 @@
                        VerticalTextAlignment="Center" 
                        TextColor="White"/>
                     <Button x:Name="autoLowerPlus"
-                        Clicked="autoLowerPlus_Clicked"
+                        
                         Text="+"
                         Font="24"
                         WidthRequest="50" 
@@ -349,7 +349,7 @@
                 <!-- Missed Buttons -->
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="autoMissedMinus"
-                        Clicked="autoMissedMinus_Clicked"
+                        
                         Text="-"
                         Font="24"
                         WidthRequest="50" 
@@ -363,7 +363,7 @@
                        TextColor="White"
                        Font="24"/>
                     <Button x:Name="autoMissedPlus"
-                        Clicked="autoMissedPlus_Clicked"
+                        
                         Text="+"
                         Font="24"
                         WidthRequest="50" 
@@ -398,7 +398,7 @@
                 <!-- Dropped Buttons -->
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="autoDroppedMinus"
-                        Clicked="autoDroppedMinus_Clicked"
+                        
                         Text="-"
                         Font="24"
                         WidthRequest="50" 
@@ -412,7 +412,7 @@
                        TextColor="White"
                        Font="24"/>
                     <Button x:Name="autoDroppedPlus"
-                        Clicked="autoDroppedPlus_Clicked"
+                      
                         Text="+"
                         Font="24"
                         WidthRequest="50" 
@@ -439,7 +439,7 @@
                 <!-- Collected Buttons -->
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="autoCollectedMinus"
-                        Clicked="autoCollectedMinus_Clicked"
+                        
                         Text="-"
                         Font="24"
                         WidthRequest="50" 
@@ -453,7 +453,7 @@
                        TextColor="White"
                        Font="24"/>
                     <Button x:Name="autoCollectedPlus"
-                        Clicked="autoCollectedPlus_Clicked"
+                        
                         Text="+"
                         Font="24"
                         WidthRequest="50" 
