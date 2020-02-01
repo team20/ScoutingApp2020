@@ -84,7 +84,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\power_port.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ScoutingApp2020\ScoutingApp2020.csproj">
       <Project>{900445BB-17C3-4477-9AB5-D4B8E924A8E8}</Project>
