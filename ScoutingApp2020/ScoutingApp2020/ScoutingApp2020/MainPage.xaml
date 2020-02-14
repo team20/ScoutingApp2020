@@ -22,7 +22,7 @@
 
                     <!--Scout Name Text Field-->
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Scout Name:"
+                        <Label Text="Name:"
                            Margin="10"
                         TextColor="White"
                         FontSize="25"
@@ -66,7 +66,7 @@
 
                     <!--Team ID Text Field-->
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Team Number:"
+                        <Label Text="Team #:"
                         Margin="10"
                         TextColor="White"
                         FontSize="25"
@@ -87,7 +87,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Picker x:Name="BreakdownPicker" WidthRequest="135" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+                        <Picker x:Name="BreakdownPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
                             <Picker.Items>
                                 <x:String>Blue</x:String>
                                 <x:String>Red</x:String>
@@ -122,7 +122,7 @@
                         <Entry x:Name="numPreloadsEntry"
                         BackgroundColor="White"
                         FontSize="25"
-                        WidthRequest="75"
+                        WidthRequest="60"
                         Keyboard="Numeric"
                         MaxLength="1"/>
 
@@ -138,8 +138,7 @@
                     WidthRequest="800" 
                      VerticalOptions="Center"/>
 
-                    <Label Text="*IMPORTANT*: If the robot is placed exactly over the center line, input 0 as 
-                       start position. Have a fantastic day."
+                    <Label Text="*IMPORTANT*: If the robot is placed exactly over the center line, input either 10, 30, or 50 as the start position. Have a fantastic day."
                        TextColor="White"
                        FontSize="25"/>
                 </StackLayout>
