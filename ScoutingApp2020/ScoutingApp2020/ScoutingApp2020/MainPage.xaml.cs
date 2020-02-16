@@ -49,5 +49,17 @@ namespace ScoutingApp2020 {
 				teamNoEntry.Focus();
 			}
 		}
+
+		private async void Button_Clicked(object sender, EventArgs e) {
+			if (ScoutNameEntry.Text == "" ||
+				MatchNumber.Text == "" ||
+				teamNoEntry.Text == "" ||
+				AllianceColorPicker.SelectedIndex == -1||
+				startPosEntry.Text == "" || 
+				numPreloadsEntry.Text==""||
+				ParkPicker.SelectedIndex == -1 ||
+				)
+				await DisplayAlert("Error", "Not all data entries are filled", "OK");
+		}
 	}
 }
