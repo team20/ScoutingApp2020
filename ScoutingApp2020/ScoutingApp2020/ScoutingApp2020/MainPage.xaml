@@ -22,13 +22,13 @@
 
                     <!--Scout Name Text Field-->
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Scout Name:"
+                        <Label Text="Name:"
                            Margin="10"
                         TextColor="White"
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Entry x:Name="scoutNameEntry"
+                        <Entry x:Name="ScoutNameEntry"
                         BackgroundColor="White"
                         FontSize="25"
                         WidthRequest="200"/>
@@ -42,7 +42,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Entry x:Name="matchNoEntry"
+                        <Entry x:Name="MatchNumber"
                         BackgroundColor="White"
                         FontSize="25"
                         WidthRequest="75"
@@ -58,7 +58,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Switch x:Name="replayToggle"
+                        <Switch x:Name="ReplayMatch"
                         Margin="10"
                         Scale="1"
                         OnColor="Lime"/>
@@ -66,7 +66,7 @@
 
                     <!--Team ID Text Field-->
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Team Number:"
+                        <Label Text="Team #:"
                         Margin="10"
                         TextColor="White"
                         FontSize="25"
@@ -87,7 +87,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Picker x:Name="BreakdownPicker" WidthRequest="135" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+                        <Picker x:Name="BreakdownPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
                             <Picker.Items>
                                 <x:String>Blue</x:String>
                                 <x:String>Red</x:String>
@@ -122,7 +122,7 @@
                         <Entry x:Name="numPreloadsEntry"
                         BackgroundColor="White"
                         FontSize="25"
-                        WidthRequest="75"
+                        WidthRequest="60"
                         Keyboard="Numeric"
                         MaxLength="1"/>
 
@@ -135,11 +135,10 @@
                 <StackLayout Margin="10">
                     <Image Source="/Resources/drawable/fieldGrid.PNG" 
                     HorizontalOptions="Start" 
-                    WidthRequest="800" 
+                    WidthRequest="900" 
                      VerticalOptions="Center"/>
 
-                    <Label Text="*IMPORTANT*: If the robot is placed exactly over the center line, input 0 as 
-                       start position. Have a fantastic day."
+                    <Label Text="*IMPORTANT*: If the robot is placed exactly over the center line, input either 10, 30, or 50 as the start position. Have a fantastic day."
                        TextColor="White"
                        FontSize="25"/>
                 </StackLayout>
@@ -174,7 +173,7 @@
                        FontSize="25"
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
-                    <Switch x:Name="initCross"
+                    <Switch x:Name="InitCross"
                         Margin="10"
                         Scale="1.5"
                         OnColor="Aqua"/>
@@ -189,109 +188,103 @@
                 <!-- Auto: Inner Port score -->
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Inner Port  "
-                       Margin="10"
                        TextColor="White"
-                       FontSize="25"
+                       FontSize="35"
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
-                    <Button x:Name="autoInnerMinus"
-                     
+                    <Button x:Name="AutoInnerMinus"                     
                         Text="-"
-                        Font="24"
-                        WidthRequest="50" 
-                        HeightRequest="50" 
+                        Font="50"
+                        WidthRequest="100" 
+                        HeightRequest="100" 
                         TextColor="Black" 
                         BorderColor="Brown" 
                         BorderWidth="4"/>
-                    <Label Text="0" 
+                    <Label Text="50" 
                        x:Name="autoInner"  
-                       FontSize="24" 
+                       FontSize="24"
+                       HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center" 
                        TextColor="White"/>
-                    <Button x:Name="autoInnerPlus"
-                        
+                    <Button x:Name="AutoInnerPlus"
                         Text="+"
-                        Font="24"
-                        WidthRequest="50" 
-                        HeightRequest="50" 
+                        Font="50"
+                        WidthRequest="100" 
+                        HeightRequest="100"
                         TextColor="Black" 
                         BorderColor="Brown" 
                         BorderWidth="4"/>
                 </StackLayout>
 
                 <!-- Spacing -->
-                <StackLayout Orientation="Vertical" Spacing="75">
+                <StackLayout Orientation="Vertical" Spacing="45">
                     <Label/>
                     <Label/>
                 </StackLayout>
 
                 <!-- Auto: Outer Port score -->
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Outer Port "
-                       Margin="10"
+                    <Label Text="Outer Port  "
                        TextColor="White"
-                       FontSize="25"
+                       FontSize="35"
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
-                    <Button x:Name="autoOuterMinus"
-                        
+                    <Button x:Name="AutoOuterMinus"                     
                         Text="-"
-                        Font="24"
-                        WidthRequest="50" 
-                        HeightRequest="50" 
+                        Font="50"
+                        WidthRequest="100" 
+                        HeightRequest="100" 
                         TextColor="Black" 
                         BorderColor="Brown" 
                         BorderWidth="4"/>
-                    <Label Text="0" 
+                    <Label Text="50" 
                        x:Name="autoOuter"  
-                       FontSize="24" 
+                       FontSize="24"
+                       HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center" 
                        TextColor="White"/>
-                    <Button x:Name="autoOuterPlus"
-                        
+                    <Button x:Name="AutoOuterPlus"                        
                         Text="+"
-                        Font="24"
-                        WidthRequest="50" 
-                        HeightRequest="50" 
+                        Font="50"
+                        WidthRequest="100" 
+                        HeightRequest="100"
                         TextColor="Black" 
                         BorderColor="Brown" 
                         BorderWidth="4"/>
                 </StackLayout>
 
                 <!-- Spacing -->
-                <StackLayout Orientation="Vertical" Spacing="100">
+                <StackLayout Orientation="Vertical" Spacing="45">
                     <Label/>
                     <Label/>
                 </StackLayout>
 
                 <!-- Auto: Lower Port score -->
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Lower Port"
-                       Margin="10"
+                    <Label Text="Lower Port  "
                        TextColor="White"
-                       FontSize="25"
+                       FontSize="35"
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
-                    <Button x:Name="autoLowerMinus"
-                        
+                    <Button x:Name="AutoLowerMinus"
                         Text="-"
-                        Font="24"
-                        WidthRequest="50" 
-                        HeightRequest="50" 
+                        Font="50"
+                        WidthRequest="100" 
+                        HeightRequest="100" 
                         TextColor="Black" 
                         BorderColor="Brown" 
                         BorderWidth="4"/>
-                    <Label Text="0" 
-                       x:Name="autoLower"  
-                       FontSize="24" 
+                    <Label Text="50" 
+                       x:Name="AutoLower"  
+                       FontSize="24"
+                       HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center" 
                        TextColor="White"/>
-                    <Button x:Name="autoLowerPlus"
-                        
+                    <Button x:Name="AutoLowerPlus"                        
                         Text="+"
-                        Font="24"
-                        WidthRequest="50" 
-                        HeightRequest="50" 
+                        Font="50"
+                        WidthRequest="100" 
+                        HeightRequest="100"
                         TextColor="Black" 
                         BorderColor="Brown" 
                         BorderWidth="4"/>
@@ -299,18 +292,13 @@
 
             </StackLayout>
 
-            <!-- Spacing Data-Image -->
-            <StackLayout Orientation="Vertical">
-                <Label Margin="25"/>
-            </StackLayout>
-
             <!-- Image w/ vert spacing -->
-            <StackLayout Orientation="Vertical" Spacing="30">
+            <StackLayout Orientation="Vertical" Spacing="10">
                 <Label/>
                 <Image Source="/Resources/drawable/power_port.png"
                    HorizontalOptions="Start"
-                   HeightRequest="600"
-                   WidthRequest="600"/>
+                   HeightRequest="620"
+                   WidthRequest="400"/>
             </StackLayout>
 
             <!-- Spacing Image-Misc. -->
@@ -337,10 +325,10 @@
 
                     <!-- Label -->
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Missed"
-                           Margin="10"
+                        <Label Text="       Missed"
+                           Margin="0"
                            TextColor="White"
-                           FontSize="25"
+                           FontSize="30"
                            HorizontalTextAlignment="Center"/>
                     </StackLayout>
 
@@ -348,33 +336,32 @@
 
                 <!-- Missed Buttons -->
                 <StackLayout Orientation="Horizontal">
-                    <Button x:Name="autoMissedMinus"
-                        
-                        Text="-"
-                        Font="24"
-                        WidthRequest="50" 
-                        HeightRequest="50" 
-                        TextColor="Black" 
-                        BorderColor="Brown" 
-                        BorderWidth="4"/>
-                    <Label Text="0"
-                       x:Name="autoMissed"
-                       VerticalTextAlignment="Center"
-                       TextColor="White"
-                       Font="24"/>
-                    <Button x:Name="autoMissedPlus"
-                        
-                        Text="+"
-                        Font="24"
-                        WidthRequest="50" 
-                        HeightRequest="50" 
-                        TextColor="Black" 
-                        BorderColor="Brown" 
-                        BorderWidth="4"/>
+                    <Button x:Name="AutoMissedMinus"
+                            Text="-"
+                            Font="50"
+                            WidthRequest="100"
+                            HeightRequest="100"
+                            TextColor="Black"
+                            BorderColor="Brown"
+                            BorderWidth="4" />
+                    <Label Text="50"
+                           x:Name="AutoMissed"
+                           FontSize="24"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           TextColor="White" />
+                    <Button x:Name="AutoMissedPlus"
+                            Text="+"
+                            Font="50"
+                            WidthRequest="100"
+                            HeightRequest="100"
+                            TextColor="Black"
+                            BorderColor="Brown"
+                            BorderWidth="4" />
                 </StackLayout>
 
                 <!-- Spacing -->
-                <StackLayout Orientation="Vertical" Spacing="30">
+                <StackLayout Orientation="Vertical">
                     <Label/>
                     <Label/>
                 </StackLayout>
@@ -387,80 +374,80 @@
 
                     <!-- Label -->
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Dropped"
-                           Margin="10"
+                        <Label Text="       Dropped"
+                           Margin="0"
+                           HorizontalOptions="End"
                            TextColor="White"
-                           FontSize="25"/>
+                           FontSize="30"/>
                     </StackLayout>
 
                 </StackLayout>
 
                 <!-- Dropped Buttons -->
                 <StackLayout Orientation="Horizontal">
-                    <Button x:Name="autoDroppedMinus"
-                        
-                        Text="-"
-                        Font="24"
-                        WidthRequest="50" 
-                        HeightRequest="50" 
-                        TextColor="Black" 
-                        BorderColor="Brown" 
-                        BorderWidth="4"/>
-                    <Label Text="0"
-                       x:Name="autoDropped"
-                       VerticalTextAlignment="Center"
-                       TextColor="White"
-                       Font="24"/>
-                    <Button x:Name="autoDroppedPlus"
-                      
-                        Text="+"
-                        Font="24"
-                        WidthRequest="50" 
-                        HeightRequest="50" 
-                        TextColor="Black" 
-                        BorderColor="Brown" 
-                        BorderWidth="4"/>
+                    <Button x:Name="AutoDroppedMinus"
+                            Text="-"
+                            Font="50"
+                            WidthRequest="100"
+                            HeightRequest="100"
+                            TextColor="Black"
+                            BorderColor="Brown"
+                            BorderWidth="4" />
+                    <Label Text="50"
+                           x:Name="AutoDropped"
+                           FontSize="24"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           TextColor="White" />
+                    <Button x:Name="AutoDroppedPlus"
+                            Text="+"
+                            Font="50"
+                            WidthRequest="100"
+                            HeightRequest="100"
+                            TextColor="Black"
+                            BorderColor="Brown"
+                            BorderWidth="4" />
                 </StackLayout>
 
                 <!-- Spacing -->
-                <StackLayout Orientation="Vertical" Spacing="30">
+                <StackLayout Orientation="Vertical">
                     <Label/>
                     <Label/>
                 </StackLayout>
 
                 <!-- Collected Label -->
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Collected"
-                           Margin="10"
+                    <Label Text="       Collected"
+                           Margin="0"
+                           HorizontalOptions="End"
                            TextColor="White"
-                           FontSize="25"/>
+                           FontSize="30"/>
                 </StackLayout>
 
                 <!-- Collected Buttons -->
                 <StackLayout Orientation="Horizontal">
-                    <Button x:Name="autoCollectedMinus"
-                        
-                        Text="-"
-                        Font="24"
-                        WidthRequest="50" 
-                        HeightRequest="50" 
-                        TextColor="Black" 
-                        BorderColor="Brown" 
-                        BorderWidth="4"/>
-                    <Label Text="0"
-                       x:Name="autoCollected"
-                       VerticalTextAlignment="Center"
-                       TextColor="White"
-                       Font="24"/>
-                    <Button x:Name="autoCollectedPlus"
-                        
-                        Text="+"
-                        Font="24"
-                        WidthRequest="50" 
-                        HeightRequest="50" 
-                        TextColor="Black" 
-                        BorderColor="Brown" 
-                        BorderWidth="4"/>
+                    <Button x:Name="AutoCollectedMinus"
+                            Text="-"
+                            Font="50"
+                            WidthRequest="100"
+                            HeightRequest="100"
+                            TextColor="Black"
+                            BorderColor="Brown"
+                            BorderWidth="4" />
+                    <Label Text="50"
+                           x:Name="AutoCollected"
+                           FontSize="24"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           TextColor="White" />
+                    <Button x:Name="AutoCollectedPlus"
+                            Text="+"
+                            Font="50"
+                            WidthRequest="100"
+                            HeightRequest="100"
+                            TextColor="Black"
+                            BorderColor="Brown"
+                            BorderWidth="4" />
                 </StackLayout>
 
             </StackLayout>
@@ -802,7 +789,7 @@
         <StackLayout Orientation="Vertical">
             <!-- SECTOR UNO-->
             <StackLayout Orientation="Horizontal">
-                <Label Text="Parked ?" TextColor="White" FontSize="25"/>
+                <Label Text="Parked ?" TextColor="White" FontSize="25" VerticalTextAlignment="Center"/>
                 <Picker Margin="10" WidthRequest="250" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
                     <Picker.Items>
                         <x:String>Park</x:String>
@@ -823,7 +810,7 @@
             </StackLayout>
             <!-- SECTOR TRES-->
             <StackLayout Orientation="Horizontal">
-                <Label Text="How Much Defense?" TextColor="White" FontSize="25"/>
+                <Label Text="How Much Defense?" TextColor="White" FontSize="25" VerticalTextAlignment="Center"/>
                 <Picker WidthRequest="150" Margin="10" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
                     <Picker.Items>
                         <x:String>None</x:String>
@@ -833,7 +820,7 @@
                     </Picker.Items>
                 </Picker>
                 
-                <Label Text="How Much Defended Against?" TextColor="White" FontSize="25"/>
+                <Label Text="How Much Defended Against?" TextColor="White" FontSize="25" VerticalTextAlignment="Center"/>
                 <Picker  WidthRequest="150" Margin="10" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
                     <Picker.Items>
                         <x:String>None</x:String>
@@ -845,7 +832,7 @@
             </StackLayout>
             <!-- SECTOR QUATRO-->
             <StackLayout Orientation="Horizontal">
-                <Label Text="Strength of Defense" TextColor="White" FontSize="25"/>
+                <Label Text="Strength of Defense?" TextColor="White" FontSize="25" VerticalTextAlignment="Center"/>
                 <Picker WidthRequest="150"  Margin="10" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
                     <Picker.Items>
                         <x:String>None</x:String>
@@ -854,7 +841,7 @@
                         <x:String>Whole Match</x:String>
                     </Picker.Items>
                 </Picker>
-                <Label Text="Strength of Opposing Defense?" TextColor="White" FontSize="25"/>
+                <Label Text="Strength of Opposing Defense?" TextColor="White" FontSize="25" VerticalTextAlignment="Center"/>
                 <Picker  WidthRequest="150" Margin="10" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
                     <Picker.Items>
                         <x:String>None</x:String>
@@ -866,7 +853,7 @@
             </StackLayout>
             <!-- SECTOR CINCO-->
             <StackLayout Orientation="Horizontal">
-                <Label Text="Bricked?" TextColor="White" FontSize="25"/>
+                <Label Text="Bricked?" TextColor="White" FontSize="25" VerticalTextAlignment="Center"/>
                 <Picker  Margin="10" FontSize="25"  WidthRequest="275" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
                     <Picker.Items>
                         <x:String>None</x:String>
@@ -875,7 +862,7 @@
                         <x:String>Mechanical Error</x:String>
                     </Picker.Items>
                 </Picker>
-                <Label Text="Role they played?" TextColor="White" FontSize="25"/>
+                <Label Text="Role they played?" TextColor="White" FontSize="25" VerticalTextAlignment="Center"/>
                 <Picker  Margin="10" FontSize="25"  WidthRequest="275" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
                     <Picker.Items>
                         <x:String>None</x:String>
@@ -890,7 +877,7 @@
             <StackLayout Orientation="Horizontal" Padding="100" />
             <!-- FINAL SECTOR -->
             <StackLayout Orientation="Horizontal">
-                <Label Text="Comments (be descriptive)" FontSize="25" TextColor="White" />
+                <Label Text="Comments (be descriptive)" FontSize="25" TextColor="White" VerticalTextAlignment="Center"/>
                 <Entry BackgroundColor="White"
                         FontSize="25"
                         WidthRequest="305"
