@@ -15,11 +15,11 @@ namespace ScoutingApp2020
         {
             InitializeComponent();
 
-            _data = new DataHandler("/storage/emulated/0/Download/ScoutingData/", "2020_test");
-            StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("2020_detroit_curie_teams.txt"));
-            _teams = streamReader.ReadLine().ToString().Split(',');
-            streamReader.Close();
-            streamReader.Dispose();
+            //_data = new DataHandler("/storage/emulated/0/Download/ScoutingData/", "2020_test");
+            //StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("2020_detroit_curie_teams.txt"));
+            //_teams = streamReader.ReadLine().ToString().Split(',');
+            //streamReader.Close();
+            //streamReader.Dispose();
             ResetAll();
         }
 
