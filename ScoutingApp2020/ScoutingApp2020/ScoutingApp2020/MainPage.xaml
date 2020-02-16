@@ -28,7 +28,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Entry x:Name="ScoutNameEntry"
+                        <Entry x:Name="ScoutName"
                         BackgroundColor="White"
                         FontSize="25"
                         WidthRequest="200"/>
@@ -72,7 +72,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Entry x:Name="teamNoEntry"
+                        <Entry x:Name="TeamNumber"
                         BackgroundColor="White"
                         FontSize="25"
                         WidthRequest="130"
@@ -87,7 +87,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Picker x:Name="BreakdownPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+                        <Picker x:Name="AllianceColor" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
                             <Picker.Items>
                                 <x:String>Blue</x:String>
                                 <x:String>Red</x:String>
@@ -103,7 +103,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Entry x:Name="startPosEntry"
+                        <Entry x:Name="StartPosition"
                         BackgroundColor="White"
                         FontSize="25"
                         WidthRequest="75"
@@ -119,7 +119,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Entry x:Name="numPreloadsEntry"
+                        <Entry x:Name="Preloaded"
                         BackgroundColor="White"
                         FontSize="25"
                         WidthRequest="60"
@@ -173,7 +173,7 @@
                        FontSize="25"
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
-                    <Switch x:Name="InitCross"
+                    <Switch x:Name="InitLine"
                         Margin="10"
                         Scale="1.5"
                         OnColor="Aqua"/>
@@ -201,7 +201,7 @@
                         BorderColor="Brown" 
                         BorderWidth="4"/>
                     <Label Text="50" 
-                       x:Name="autoInner"  
+                       x:Name="AutoInner"  
                        FontSize="24"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center" 
@@ -238,7 +238,7 @@
                         BorderColor="Brown" 
                         BorderWidth="4"/>
                     <Label Text="50" 
-                       x:Name="autoOuter"  
+                       x:Name="AutoOuter"  
                        FontSize="24"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center" 
@@ -486,7 +486,7 @@
                        FontSize="25"
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
-                    <Button x:Name="teleInnerMinus"
+                    <Button x:Name="TeleInnerMinus"
                        
                         Text="-"
                         Font="24"
@@ -496,11 +496,11 @@
                         BorderColor="Brown" 
                         BorderWidth="4"/>
                     <Label Text="0" 
-                       x:Name="teleInner"  
+                       x:Name="TeleInner"  
                        FontSize="24" 
                        VerticalTextAlignment="Center" 
                        TextColor="White"/>
-                    <Button x:Name="teleInnerPlus"
+                    <Button x:Name="TeleInnerPlus"
                         
                         Text="+"
                         Font="24"
@@ -525,7 +525,7 @@
                        FontSize="25"
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
-                    <Button x:Name="teleOuterMinus"
+                    <Button x:Name="TeleOuterMinus"
                         
                         Text="-"
                         Font="24"
@@ -535,11 +535,11 @@
                         BorderColor="Brown" 
                         BorderWidth="4"/>
                     <Label Text="0" 
-                       x:Name="teleOuter"  
+                       x:Name="TeleOuter"  
                        FontSize="24" 
                        VerticalTextAlignment="Center" 
                        TextColor="White"/>
-                    <Button x:Name="teleOuterPlus"
+                    <Button x:Name="TeleOuterPlus"
                         
                         Text="+"
                         Font="24"
@@ -556,7 +556,7 @@
                     <Label/>
                 </StackLayout>
 
-                <!-- tele: Lower Port score -->
+                <!-- Tele: Lower Port score -->
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Lower Port"
                        Margin="10"
@@ -564,7 +564,7 @@
                        FontSize="25"
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
-                    <Button x:Name="teleLowerMinus"
+                    <Button x:Name="TeleLowerMinus"
                         
                         Text="-"
                         Font="24"
@@ -574,11 +574,11 @@
                         BorderColor="Brown" 
                         BorderWidth="4"/>
                     <Label Text="0" 
-                       x:Name="teleLower"  
+                       x:Name="TeleLower"  
                        FontSize="24" 
                        VerticalTextAlignment="Center" 
                        TextColor="White"/>
-                    <Button x:Name="teleLowerPlus"
+                    <Button x:Name="TeleLowerPlus"
                         
                         Text="+"
                         Font="24"
@@ -664,7 +664,7 @@
 
                 <!-- Missed Buttons -->
                 <StackLayout Orientation="Horizontal">
-                    <Button x:Name="teleMissedMinus"
+                    <Button x:Name="TeleMissedMinus"
                         
                         Text="-"
                         Font="24"
@@ -674,11 +674,11 @@
                         BorderColor="Brown" 
                         BorderWidth="4"/>
                     <Label Text="0"
-                       x:Name="teleMissed"
+                       x:Name="TeleMissed"
                        VerticalTextAlignment="Center"
                        TextColor="White"
                        Font="24"/>
-                    <Button x:Name="teleMissedPlus"
+                    <Button x:Name="TeleMissedPlus"
                         
                         Text="+"
                         Font="24"
@@ -713,7 +713,7 @@
 
                 <!-- Dropped Buttons -->
                 <StackLayout Orientation="Horizontal">
-                    <Button x:Name="teleDroppedMinus"
+                    <Button x:Name="TeleDroppedMinus"
                         
                         Text="-"
                         Font="24"
@@ -723,11 +723,11 @@
                         BorderColor="Brown" 
                         BorderWidth="4"/>
                     <Label Text="0"
-                       x:Name="teleDropped"
+                       x:Name="TeleDropped"
                        VerticalTextAlignment="Center"
                        TextColor="White"
                        Font="24"/>
-                    <Button x:Name="teleDroppedPlus"
+                    <Button x:Name="TeleDroppedPlus"
                       
                         Text="+"
                         Font="24"
@@ -752,9 +752,9 @@
                            FontSize="25"/>
                 </StackLayout>
 
-                <!-- Collected Buttons -->
+                <!-- Collected Buttons a -->
                 <StackLayout Orientation="Horizontal">
-                    <Button x:Name="teleCollectedMinus"
+                    <Button x:Name="TeleCollectedMinus"
                         
                         Text="-"
                         Font="24"
@@ -764,11 +764,11 @@
                         BorderColor="Brown" 
                         BorderWidth="4"/>
                     <Label Text="0"
-                       x:Name="teleCollected"
+                       x:Name="TeleCollected"
                        VerticalTextAlignment="Center"
                        TextColor="White"
                        Font="24"/>
-                    <Button x:Name="teleCollectedPlus"
+                    <Button x:Name="TeleCollectedPlus"
                         
                         Text="+"
                         Font="24"
@@ -790,7 +790,7 @@
             <!-- SECTOR UNO-->
             <StackLayout Orientation="Horizontal">
                 <Label Text="Parked ?" TextColor="White" FontSize="25" VerticalTextAlignment="Center"/>
-                <Picker Margin="10" WidthRequest="250" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
+                <Picker x:Name="Park" Margin="10" WidthRequest="250" FontSize="25" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BackgroundColor="White">
                     <Picker.Items>
                         <x:String>Park</x:String>
                         <x:String>Climbed</x:String>
