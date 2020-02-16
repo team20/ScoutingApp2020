@@ -2,14 +2,17 @@
 using System.IO;
 using Xamarin.Forms;
 
-namespace ScoutingApp2020 {
-    public partial class MainPage : TabbedPage {
-		#region Main
-		private readonly DataHandler _data;
+namespace ScoutingApp2020
+{
+    public partial class MainPage : TabbedPage
+    {
+        #region Main
+        private readonly DataHandler _data;
 
         private readonly string[] _teams;
 
-        public MainPage() {
+        public MainPage()
+        {
             InitializeComponent();
 
             //_data = new DataHandler("/storage/emulated/0/Download/ScoutingData/", "2020_test");
@@ -20,8 +23,10 @@ namespace ScoutingApp2020 {
             ResetAll();
         }
 
-        private void MainTabbedPage_CurrentPageChanged(object sender, EventArgs e) {
-            switch (MainTabbedPage.CurrentPage.TabIndex) {
+        private void MainTabbedPage_CurrentPageChanged(object sender, EventArgs e)
+        {
+            switch (MainTabbedPage.CurrentPage.TabIndex)
+            {
                 case 0:
                     BarBackgroundColor = new Color(0.0, 0.6, 0.0);
                     break;
@@ -40,10 +45,11 @@ namespace ScoutingApp2020 {
             }
         }
 
-        private void ResetAll() {
+        private void ResetAll()
+        {
 
         }
 
-		#endregion
-	}
+        #endregion
+    }
 }

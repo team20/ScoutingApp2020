@@ -28,7 +28,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Entry x:Name="ScoutNameEntry"
+                        <Entry x:Name="ScoutName"
                         BackgroundColor="White"
                         FontSize="25"
                         WidthRequest="200"/>
@@ -72,7 +72,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Entry x:Name="teamNoEntry"
+                        <Entry x:Name="TeamNumber"
                         BackgroundColor="White"
                         FontSize="25"
                         WidthRequest="130"
@@ -88,7 +88,11 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
+
                         <Picker x:Name="AllianceColorPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+
+                        
+
                             <Picker.Items>
                                 <x:String>Blue</x:String>
                                 <x:String>Red</x:String>
@@ -104,7 +108,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Entry x:Name="startPosEntry"
+                        <Entry x:Name="StartPosition"
                         BackgroundColor="White"
                         FontSize="25"
                         WidthRequest="75"
@@ -120,7 +124,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Entry x:Name="numPreloadsEntry"
+                        <Entry x:Name="Preloaded"
                         BackgroundColor="White"
                         FontSize="25"
                         WidthRequest="60"
@@ -174,7 +178,7 @@
                        FontSize="25"
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
-                    <Switch x:Name="InitCross"
+                    <Switch x:Name="InitLine"
                         Margin="10"
                         Scale="1.5"
                         OnColor="Aqua"/>
@@ -510,6 +514,7 @@
                 <!-- Auto: Inner Port score -->
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Inner Port  "
+
                            TextColor="White"
                            FontSize="35"
                            HorizontalOptions="Start"
@@ -536,6 +541,8 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
+
+                    
                 </StackLayout>
 
                 <!-- Spacing -->
@@ -547,6 +554,7 @@
 
                 <!-- Tele: Outer Port score -->
                 <StackLayout Orientation="Horizontal">
+
                     <Label Text="Outer Port  "
                            TextColor="White"
                            FontSize="35"
@@ -574,6 +582,7 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
+
                 </StackLayout>
 
                 <!-- Spacing -->
@@ -585,6 +594,7 @@
 
                 <!-- Tele: Lower Port score -->
                 <StackLayout Orientation="Horizontal">
+
                     <Label Text="Lower Port  "
                            TextColor="White"
                            FontSize="35"
@@ -612,6 +622,7 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
+
                 </StackLayout>
 
             </StackLayout>
@@ -664,6 +675,7 @@
                 <!-- Missed Buttons -->
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="TeleMissedMinus"
+
                             Text="-"
                             Font="50"
                             WidthRequest="100"
@@ -685,6 +697,7 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
+
                 </StackLayout>
 
                 <!-- Spacing -->
@@ -713,6 +726,7 @@
                 <!-- Dropped Buttons -->
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="TeleDroppedMinus"
+
                             Text="-"
                             Font="50"
                             WidthRequest="100"
@@ -734,6 +748,7 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
+
                 </StackLayout>
 
                 <!-- Spacing -->
@@ -751,9 +766,10 @@
                            FontSize="30" />
                 </StackLayout>
 
-                <!-- Collected Buttons -->
+                <!-- Collected Buttons a -->
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="TeleCollectedMinus"
+
                             Text="-"
                             Font="50"
                             WidthRequest="100"
@@ -775,6 +791,7 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
+
                 </StackLayout>
 
             </StackLayout>
@@ -785,6 +802,7 @@
 
     </ContentPage>
     <ContentPage Title="EndGame" Padding="10" TabIndex="3">
+
         <StackLayout Orientation="Horizontal" Spacing="50">
             <StackLayout Orientation="Vertical" Spacing="50">
                 <StackLayout Orientation="Horizontal">
@@ -900,6 +918,7 @@
                             FontSize="24"
                             />
                 </StackLayout>
+
             </StackLayout>
             <StackLayout Orientation="Vertical"
                          Spacing="25">
