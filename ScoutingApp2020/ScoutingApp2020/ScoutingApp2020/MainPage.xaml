@@ -28,7 +28,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Entry x:Name="scoutNameEntry"
+                        <Entry x:Name="ScoutNameEntry"
                         BackgroundColor="White"
                         FontSize="25"
                         WidthRequest="200"/>
@@ -42,7 +42,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Entry x:Name="matchNoEntry"
+                        <Entry x:Name="MatchNumber"
                         BackgroundColor="White"
                         FontSize="25"
                         WidthRequest="75"
@@ -58,7 +58,7 @@
                         FontSize="25"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
-                        <Switch x:Name="replayToggle"
+                        <Switch x:Name="ReplayMatch"
                         Margin="10"
                         Scale="1"
                         OnColor="Lime"/>
