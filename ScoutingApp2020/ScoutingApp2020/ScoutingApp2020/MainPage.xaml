@@ -113,7 +113,7 @@
                         FontSize="25"
                         WidthRequest="75"
                         Keyboard="Numeric"
-                        MaxLength="1"/>
+                        MaxLength="2"/>
                     </StackLayout>
 
                     <!--Num Balls Preloaded Text Field-->
@@ -205,7 +205,7 @@
                         TextColor="Black" 
                         BorderColor="Brown" 
                         BorderWidth="4"/>
-                    <Label Text="50" 
+                    <Label Text="0" 
                        x:Name="AutoInner"  
                        FontSize="24"
                        HorizontalTextAlignment="Center"
@@ -242,7 +242,7 @@
                         TextColor="Black" 
                         BorderColor="Brown" 
                         BorderWidth="4"/>
-                    <Label Text="50" 
+                    <Label Text="0" 
                        x:Name="AutoOuter"  
                        FontSize="24"
                        HorizontalTextAlignment="Center"
@@ -279,7 +279,7 @@
                         TextColor="Black" 
                         BorderColor="Brown" 
                         BorderWidth="4"/>
-                    <Label Text="50" 
+                    <Label Text="0" 
                        x:Name="AutoLower"  
                        FontSize="24"
                        HorizontalTextAlignment="Center"
@@ -349,7 +349,7 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
-                    <Label Text="50"
+                    <Label Text="0"
                            x:Name="AutoMissed"
                            FontSize="24"
                            HorizontalTextAlignment="Center"
@@ -398,7 +398,7 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
-                    <Label Text="50"
+                    <Label Text="0"
                            x:Name="AutoDropped"
                            FontSize="24"
                            HorizontalTextAlignment="Center"
@@ -439,7 +439,7 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
-                    <Label Text="50"
+                    <Label Text="0"
                            x:Name="AutoCollected"
                            FontSize="24"
                            HorizontalTextAlignment="Center"
@@ -527,7 +527,7 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
-                    <Label Text="50"
+                    <Label Text="0"
                            x:Name="TeleInner"
                            FontSize="24"
                            HorizontalTextAlignment="Center"
@@ -568,7 +568,7 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
-                    <Label Text="50"
+                    <Label Text="0"
                            x:Name="TeleOuter"
                            FontSize="24"
                            HorizontalTextAlignment="Center"
@@ -608,7 +608,7 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
-                    <Label Text="50"
+                    <Label Text="0"
                            x:Name="TeleLower"
                            FontSize="24"
                            HorizontalTextAlignment="Center"
@@ -683,7 +683,7 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
-                    <Label Text="50"
+                    <Label Text="0"
                            x:Name="TeleMissed"
                            FontSize="24"
                            HorizontalTextAlignment="Center"
@@ -734,7 +734,7 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
-                    <Label Text="50"
+                    <Label Text="0"
                            x:Name="TeleDropped"
                            FontSize="24"
                            HorizontalTextAlignment="Center"
@@ -777,7 +777,7 @@
                             TextColor="Black"
                             BorderColor="Brown"
                             BorderWidth="4" />
-                    <Label Text="50"
+                    <Label Text="0"
                            x:Name="TeleCollected"
                            FontSize="24"
                            HorizontalTextAlignment="Center"
