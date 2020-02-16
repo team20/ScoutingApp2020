@@ -1,23 +1,22 @@
-﻿using System;
-using System.IO;
+﻿
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace ScoutingApp2020 {
-    public partial class MainPage : TabbedPage {
-		#region Main
-		private readonly DataHandler _data;
-
-        private readonly string[] _teams;
-
-        public MainPage() {
+namespace ScoutingApp2020
+{
+    // Learn more about making custom code visible in the Xamarin.Forms previewer
+    // by visiting https://aka.ms/xamarinforms-previewer
+    [DesignTimeVisible(false)]
+    public partial class MainPage : TabbedPage
+    {
+        public MainPage()
+        {
             InitializeComponent();
-
-            _data = new DataHandler("/storage/emulated/0/Download/ScoutingData/", "2020_test");
-            StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("2020_detroit_curie_teams.txt"));
-            _teams = streamReader.ReadLine().ToString().Split(',');
-            streamReader.Close();
-            streamReader.Dispose();
-            ResetAll();
         }
 
         private void MainTabbedPage_CurrentPageChanged(object sender, EventArgs e) {
@@ -40,10 +39,12 @@ namespace ScoutingApp2020 {
             }
         }
 
-        private void ResetAll() {
+        private void ResetAll()
+        {
 
         }
 
-		#endregion
-	}
+
+    }
 }
+
