@@ -40,13 +40,13 @@ namespace ScoutingApp2020 {
 		private void teamNoEntry_Unfocused(object sender, FocusEventArgs e) {
 			bool valid = false;
 			foreach (string team in _teams)
-				if (teamNoEntry.Text == team || teamNoEntry.Text == "") {
+				if (TeamNumber.Text == team || TeamNumber.Text == "") {
 					valid = true;
 					break;
 				}
 			if (!valid) {
 				DisplayAlert("Invalid Team Number", "The team number you entered does not match any of the teams at this event", "OK");
-				teamNoEntry.Focus();
+				TeamNumber.Focus();
 			}
 		}
 	}
