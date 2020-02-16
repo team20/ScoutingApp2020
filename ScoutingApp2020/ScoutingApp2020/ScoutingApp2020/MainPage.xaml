@@ -209,7 +209,7 @@
                        VerticalTextAlignment="Center" 
                        TextColor="White"/>
                     <Button x:Name="autoInnerPlus"
-                        
+                        Clicked="autoInnerPlus_Clicked"
                         Text="+"
                         Font="24"
                         WidthRequest="50" 

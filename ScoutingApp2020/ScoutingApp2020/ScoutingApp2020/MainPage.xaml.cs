@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+using System;
+using System.IO;
+using Android;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -7,15 +10,22 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace ScoutingApp2020
-{
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(false)]
+{   
     public partial class MainPage : TabbedPage
     {
-        public MainPage()
+        private DataHandler data;
+
+        private string[] teams;
+        public MainPage()    
         {
             InitializeComponent();
+
+            data = new DataHandler("/storage/emulated/0/Download/", "2019_detroit_curie_full_data", "2019_detroit_curie_partial_data_");
+            StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("2019_detroit_curie_teams.txt"));
+            teams = streamReader.ReadLine().ToString().Split(',');
+            streamReader.Close();
+            streamReader.Dispose();
+            ResetAll();
         }
         private void MainTabbedPage_CurrentPageChanged(object sender, EventArgs e)
         {
@@ -39,6 +49,17 @@ namespace ScoutingApp2020
             }
         }
 
+        private void ResetAll()
+        {
 
+        }
+            private void autoInnerPlus_Clicked(object sender, EventArgs e)
+        {
+            
+                
+        }
     }
+
+   
 }
+
