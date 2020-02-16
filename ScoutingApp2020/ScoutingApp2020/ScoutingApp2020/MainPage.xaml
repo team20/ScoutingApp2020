@@ -493,7 +493,7 @@
                            FontSize="25"
                            HorizontalOptions="Start"
                            VerticalOptions="Center" />
-                    <Switch x:Name="ctrlRotate"
+                    <Switch x:Name="RotationControl"
                             Margin="10"
                             Scale="1.5"
                             OnColor="Aqua" />
@@ -504,7 +504,7 @@
                            FontSize="25"
                            HorizontalOptions="Start"
                            VerticalOptions="Center" />
-                    <Switch x:Name="ctrlPosition"
+                    <Switch x:Name="PositionControl"
                             Margin="10"
                             Scale="1.5"
                             OnColor="Aqua" />
