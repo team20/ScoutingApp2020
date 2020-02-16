@@ -752,7 +752,7 @@
                            FontSize="25"/>
                 </StackLayout>
 
-                <!-- Collected Buttons -->
+                <!-- Collected Buttons a -->
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="TeleCollectedMinus"
                         
