@@ -17,7 +17,6 @@ namespace ScoutingApp2020 {
 		public int AutoInner { get; set; } = 0;
 		public int AutoOuter { get; set; } = 0;
 		public int AutoLower { get; set; } = 0;
-		public int AutoBottom { get; set; } = 0;
 		public int AutoMissed { get; set; } = 0;
 		public int AutoDropped { get; set; } = 0;
 		public int AutoCollected { get; set; } = 0;
@@ -25,7 +24,7 @@ namespace ScoutingApp2020 {
 		public int Fouls { get; set; } = 0;
 		//This may be moved to "HeadScout App"
 		//TELEOP
-		public int TeleBottom { get; set; } = 0;
+		public int TeleLower { get; set; } = 0;
 		public int TeleOuter { get; set; } = 0;
 		public int TeleInner { get; set; } = 0;
 		public int TeleMissed { get; set; } = 0;
@@ -96,13 +95,13 @@ namespace ScoutingApp2020 {
 				StartPosition + separator +
 				Preloaded + separator +
 				InitLine + separator +
-				AutoBottom + separator +
+				AutoLower + separator +
 				AutoOuter + separator +
 				AutoInner + separator +
 				AutoMissed + separator +
 				AutoDropped + separator +
 				AutoCollected + separator +
-				TeleBottom + separator +
+				TeleLower + separator +
 				TeleOuter + separator +
 				TeleInner + separator +
 				TeleMissed + separator +
@@ -164,13 +163,13 @@ namespace ScoutingApp2020 {
 				nameof(StartPosition) + ", " +
 				nameof(Preloaded) + ", " +
 				nameof(InitLine) + ", " +
-				nameof(AutoBottom) + ", " +
+				nameof(AutoLower) + ", " +
 				nameof(AutoOuter) + ", " +
 				nameof(AutoInner) + ", " +
 				nameof(AutoMissed) + ", " +
 				nameof(AutoDropped) + ", " +
 				nameof(AutoCollected) + ", " +
-				nameof(TeleBottom) + ", " +
+				nameof(TeleLower) + ", " +
 				nameof(TeleOuter) + ", " +
 				nameof(TeleInner) + ", " +
 				nameof(TeleMissed) + ", " +
@@ -203,13 +202,13 @@ namespace ScoutingApp2020 {
 				StartPosition + ", " +
 				Preloaded + ", " +
 				(InitLine ? 1 : 0) + ", " +
-				AutoBottom + ", " +
+				AutoLower + ", " +
 				AutoOuter + ", " +
 				AutoInner + ", " +
 				AutoMissed + ", " +
 				AutoDropped + ", " +
 				AutoCollected + ", " +
-				TeleBottom + ", " +
+				TeleLower + ", " +
 				TeleOuter + ", " +
 				TeleInner + ", " +
 				TeleMissed + ", " +
