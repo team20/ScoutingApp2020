@@ -143,9 +143,6 @@
                     WidthRequest="900" 
                      VerticalOptions="Center"/>
 
-                    <Label Text="*IMPORTANT*: If the robot is placed exactly over the center line, input either 10, 30, or 50 as the start position. Have a fantastic day."
-                       TextColor="White"
-                       FontSize="25"/>
                 </StackLayout>
             </StackLayout>
         </StackLayout>
@@ -204,7 +201,8 @@
                         HeightRequest="100" 
                         TextColor="Black" 
                         BorderColor="Brown" 
-                        BorderWidth="4"/>
+                        BorderWidth="4"
+                            Clicked='AutoInnerMinus_Clicked'/>
                     <Label Text="0" 
                        x:Name="AutoInner"  
                        FontSize="24"
@@ -217,8 +215,9 @@
                         WidthRequest="100" 
                         HeightRequest="100"
                         TextColor="Black" 
-                        BorderColor="Brown" 
-                        BorderWidth="4"/>
+                        BorderColor="Green" 
+                        BorderWidth="4"
+                            Clicked="AutoInnerPlus_Clicked"/>
                 </StackLayout>
 
                 <!-- Spacing -->
@@ -241,7 +240,8 @@
                         HeightRequest="100" 
                         TextColor="Black" 
                         BorderColor="Brown" 
-                        BorderWidth="4"/>
+                        BorderWidth="4"
+                            Clicked="AutoOuterMinus_Clicked"/>
                     <Label Text="0" 
                        x:Name="AutoOuter"  
                        FontSize="24"
@@ -254,8 +254,9 @@
                         WidthRequest="100" 
                         HeightRequest="100"
                         TextColor="Black" 
-                        BorderColor="Brown" 
-                        BorderWidth="4"/>
+                        BorderColor="Green" 
+                        BorderWidth="4"
+                            Clicked="AutoOuterPlus_Clicked"/>
                 </StackLayout>
 
                 <!-- Spacing -->
@@ -278,7 +279,8 @@
                         HeightRequest="100" 
                         TextColor="Black" 
                         BorderColor="Brown" 
-                        BorderWidth="4"/>
+                        BorderWidth="4"
+                            Clicked="AutoLowerMinus_Clicked"/>
                     <Label Text="0" 
                        x:Name="AutoLower"  
                        FontSize="24"
@@ -291,8 +293,9 @@
                         WidthRequest="100" 
                         HeightRequest="100"
                         TextColor="Black" 
-                        BorderColor="Brown" 
-                        BorderWidth="4"/>
+                        BorderColor="Green" 
+                        BorderWidth="4"
+                            Clicked='AutoLowerPlus_Clicked'/>
                 </StackLayout>
 
             </StackLayout>
@@ -348,7 +351,8 @@
                             HeightRequest="100"
                             TextColor="Black"
                             BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderWidth="4" 
+                                Clicked="AutoMissedMinus_Clicked"/>
                     <Label Text="0"
                            x:Name="AutoMissed"
                            FontSize="24"
@@ -361,8 +365,9 @@
                             WidthRequest="100"
                             HeightRequest="100"
                             TextColor="Black"
-                            BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderColor="Green"
+                            BorderWidth="4" 
+                                Clicked="AutoMissedPlus_Clicked"/>
                 </StackLayout>
 
                 <!-- Spacing -->
@@ -397,7 +402,8 @@
                             HeightRequest="100"
                             TextColor="Black"
                             BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderWidth="4" 
+                                Clicked="AutoDroppedMinus_Clicked"/>
                     <Label Text="0"
                            x:Name="AutoDropped"
                            FontSize="24"
@@ -410,8 +416,9 @@
                             WidthRequest="100"
                             HeightRequest="100"
                             TextColor="Black"
-                            BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderColor="Green"
+                            BorderWidth="4"
+                                Clicked="AutoDroppedPlus_Clicked"/>
                 </StackLayout>
 
                 <!-- Spacing -->
@@ -438,7 +445,8 @@
                             HeightRequest="100"
                             TextColor="Black"
                             BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderWidth="4" 
+                                Clicked="AutoCollectedMinus_Clicked"/>
                     <Label Text="0"
                            x:Name="AutoCollected"
                            FontSize="24"
@@ -451,8 +459,9 @@
                             WidthRequest="100"
                             HeightRequest="100"
                             TextColor="Black"
-                            BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderColor="Green"
+                            BorderWidth="4" 
+                                Clicked="AutoCollectedPlus_Clicked"/>
                 </StackLayout>
 
             </StackLayout>
@@ -526,7 +535,8 @@
                             HeightRequest="100"
                             TextColor="Black"
                             BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderWidth="4" 
+                            Clicked="TeleInnerMinus_Clicked"/>
                     <Label Text="0"
                            x:Name="TeleInner"
                            FontSize="24"
@@ -539,8 +549,9 @@
                             WidthRequest="100"
                             HeightRequest="100"
                             TextColor="Black"
-                            BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderColor="Green"
+                            BorderWidth="4" 
+                            Clicked="TeleInnerPlus_Clicked"/>
 
                     
                 </StackLayout>
@@ -567,7 +578,8 @@
                             HeightRequest="100"
                             TextColor="Black"
                             BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderWidth="4" 
+                            Clicked="TeleOuterMinus_Clicked"/>
                     <Label Text="0"
                            x:Name="TeleOuter"
                            FontSize="24"
@@ -580,8 +592,9 @@
                             WidthRequest="100"
                             HeightRequest="100"
                             TextColor="Black"
-                            BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderColor="Green"
+                            BorderWidth="4" 
+                            Clicked="TeleOuterPlus_Clicked"/>
 
                 </StackLayout>
 
@@ -607,7 +620,8 @@
                             HeightRequest="100"
                             TextColor="Black"
                             BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderWidth="4"
+                            Clicked="TeleLowerMinus_Clicked"/>
                     <Label Text="0"
                            x:Name="TeleLower"
                            FontSize="24"
@@ -620,8 +634,9 @@
                             WidthRequest="100"
                             HeightRequest="100"
                             TextColor="Black"
-                            BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderColor="Green"
+                            BorderWidth="4" 
+                            Clicked="TeleLowerPlus_Clicked"/>
 
                 </StackLayout>
 
@@ -682,7 +697,8 @@
                             HeightRequest="100"
                             TextColor="Black"
                             BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderWidth="4" 
+                            Clicked="TeleMissedMinus_Clicked"/>
                     <Label Text="0"
                            x:Name="TeleMissed"
                            FontSize="24"
@@ -695,8 +711,9 @@
                             WidthRequest="100"
                             HeightRequest="100"
                             TextColor="Black"
-                            BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderColor="Green"
+                            BorderWidth="4"
+                            Clicked="TeleMissedPlus_Clicked"/>
 
                 </StackLayout>
 
@@ -733,7 +750,8 @@
                             HeightRequest="100"
                             TextColor="Black"
                             BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderWidth="4" 
+                            Clicked="TeleDroppedMinus_Clicked"/>
                     <Label Text="0"
                            x:Name="TeleDropped"
                            FontSize="24"
@@ -746,8 +764,9 @@
                             WidthRequest="100"
                             HeightRequest="100"
                             TextColor="Black"
-                            BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderColor="Green"
+                            BorderWidth="4"
+                            Clicked="TeleDroppedPlus_Clicked"/>
 
                 </StackLayout>
 
@@ -776,7 +795,8 @@
                             HeightRequest="100"
                             TextColor="Black"
                             BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderWidth="4"
+                            Clicked="TeleCollectedMinus_Clicked"/>
                     <Label Text="0"
                            x:Name="TeleCollected"
                            FontSize="24"
@@ -789,8 +809,9 @@
                             WidthRequest="100"
                             HeightRequest="100"
                             TextColor="Black"
-                            BorderColor="Brown"
-                            BorderWidth="4" />
+                            BorderColor="Green"
+                            BorderWidth="4"
+                            Clicked="TeleCollectedPlus_Clicked"/>
 
                 </StackLayout>
 
@@ -804,7 +825,7 @@
     <ContentPage Title="EndGame" Padding="10" TabIndex="3">
 
         <StackLayout Orientation="Horizontal" Spacing="50">
-            <StackLayout Orientation="Vertical" Spacing="50">
+            <StackLayout Orientation="Vertical" Spacing="25">
                 <StackLayout Orientation="Horizontal">
                     <Image Source="Resources/drawable/endGame.png"
                            HorizontalOptions="Center"
@@ -812,72 +833,103 @@
                            Margin="10"/>
                     <StackLayout Orientation="Vertical">
                         <StackLayout Orientation="Vertical">
-                            <Label Text="Which Climb Zone Attempted?"
+
+                            <Label Text="Which Zone Attempted?"
                                    TextColor="White"
                                    FontSize="24"
                                    VerticalOptions="Center" />
-                            <Picker x:Name="ClimbZoneAttemptedPicker"
+                            <Picker x:Name="ZoneAttemptedPicker"
                                     WidthRequest="150"
                                     VerticalOptions="Center"
                                     FontSize="24"
                                     TextColor="Black"
                                     BackgroundColor="White">
                                 <Picker.Items>
-                                    <x:String>Did Not Climb</x:String>
+                                    <x:String>None</x:String>
                                     <x:String>Zone 1</x:String>
                                     <x:String>Zone 2</x:String>
                                     <x:String>Zone 3</x:String>
                                     <x:String>Zone 4</x:String>
                                 </Picker.Items>
                             </Picker>
-                            <Label Text="Which Climb Zone Achieved?"
-                                   TextColor="White"
-                                   FontSize="24"
-                                   VerticalOptions="Center" />
-                            <Picker x:Name="ClimbZoneAchievedPicker"
-                                    WidthRequest="150"
-                                    VerticalOptions="Center"
-                                    FontSize="24"
-                                    TextColor="Black"
-                                    BackgroundColor="White">
-                                <Picker.Items>
-                                    <x:String>Did Not Climb</x:String>
-                                    <x:String>Zone 1</x:String>
-                                    <x:String>Zone 2</x:String>
-                                    <x:String>Zone 3</x:String>
-                                    <x:String>Zone 4</x:String>
-                                </Picker.Items>
-                            </Picker>
-                            <Label Text="Bricked or Disabled?"
-                                   TextColor="White"
-                                   FontSize="24" />
-                            <Picker x:Name="BreakdownPicker"
-                                    WidthRequest="400"
-                                    VerticalOptions="Center"
-                                    FontSize="24"
-                                    TextColor="Black"
-                                    BackgroundColor="White">
-                                <Picker.Items>
-                                    <x:String>N/A</x:String>
-                                    <x:String>Fell over and not righted</x:String>
-                                    <x:String>Disconnected from field</x:String>
-                                    <x:String>Massive mechanical failure</x:String>
-                                    <x:String>Battery fell out/robot turned off</x:String>
-                                    <x:String>Disabled for safety violation</x:String>
-                                    <x:String>Bumpers fell off</x:String>
-                                    <x:String>Other: talk about it in comments</x:String>
-                                </Picker.Items>
-                            </Picker>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Attempted Climb?"
+                                       TextColor="White"
+                                       Margin="13"
+                                       FontSize="24" />
+                                <Switch x:Name= "ClimbAttemptedSwitch" />
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Climb Successful?"
+                                       TextColor="White"
+                                       Margin="13"
+                                       FontSize="24" />
+                                <Switch x:Name="ClimbSuccessSwitch" />
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Climb Balanced?"
+                                       TextColor="White"
+                                       Margin="13"
+                                       FontSize="24" />
+                                <Switch x:Name="ClimbBalancedSwitch" />
+                            </StackLayout>
+                            
+                            
+
+
+
+
+
 
                         </StackLayout>
                     </StackLayout>
                 </StackLayout>
+ 
+
+
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Fouls  "
+                               TextColor="White"
+                               FontSize="25"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Center" />
+                        <Button x:Name="FoulsMinus"
+                                Text="-"
+                                Font="25"
+                                WidthRequest="50"
+                                HeightRequest="50"
+                                TextColor="Black"
+                                BorderColor="Brown"
+                                BorderWidth="4"
+                                Clicked="FoulsMinus_Clicked" />
+                        <Label Text="0"
+                               x:Name="Fouls"
+                               FontSize="24"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               TextColor="White" />
+                        <Button x:Name="FoulsPlus"
+                                Text="+"
+                                Font="25"
+                                WidthRequest="50"
+                                HeightRequest="50"
+                                TextColor="Black"
+                                BorderColor="Green"
+                                BorderWidth="4"
+                                Clicked="FoulsPlus_Clicked"/>
+                    </StackLayout>
+
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Was Helped?"
                            TextColor="White"
                            FontSize="24" />
                     <Switch x:Name="EndHelped" />
                 </StackLayout>
+                
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Assisted Others?"
                            TextColor="White"
@@ -921,42 +973,47 @@
 
             </StackLayout>
             <StackLayout Orientation="Vertical"
-                         Spacing="25">
+                         Spacing="15">
                 <StackLayout Orientation="Horizontal"
                              Spacing="25">
                     <StackLayout Orientation="Vertical">
-                        <Label Text="SOMETHING"
+                        <Label Text="Bricked or Disabled?"
                                TextColor="White"
-                               FontSize="24" />
-                        <Picker x:Name="DefenseAmountPicker"
-                                WidthRequest="100"
-                                VerticalOptions="Center"
-                                FontSize="24"
-                                TextColor="Black"
-                                BackgroundColor="White">
-                            <Picker.Items>
-                                <x:String>None</x:String>
-                                <x:String>Some</x:String>
-                                <x:String>A lot</x:String>
-                            </Picker.Items>
-                        </Picker>
-                    </StackLayout>
-                    <StackLayout Orientation="Vertical">
-                        <Label Text="SOMETHING"
-                               TextColor="White"
-                               FontSize="24" />
-                        <Picker x:Name="DefenseSkillPicker"
-                                WidthRequest="100"
+                               FontSize="20" />
+                        <Picker x:Name="BreakdownPicker"
+                                WidthRequest="400"
                                 VerticalOptions="Center"
                                 FontSize="24"
                                 TextColor="Black"
                                 BackgroundColor="White">
                             <Picker.Items>
                                 <x:String>N/A</x:String>
-                                <x:String>Bad</x:String>
-                                <x:String>Okay</x:String>
-                                <x:String>Good</x:String>
-                                <x:String>Excellent</x:String>
+                                <x:String>Fell over and not righted</x:String>
+                                <x:String>Disconnected from field</x:String>
+                                <x:String>Massive mechanical failure</x:String>
+                                <x:String>Battery fell out/robot turned off</x:String>
+                                <x:String>Disabled for safety violation</x:String>
+                                <x:String>Bumpers fell off</x:String>
+                                <x:String>Other: talk about it in comments</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Role of Bot"
+                               TextColor="White"
+                               FontSize="20" />
+                        <Picker x:Name="RolePicker"
+                                WidthRequest="150"
+                                VerticalOptions="Center"
+                                FontSize="24"
+                                TextColor="Black"
+                                BackgroundColor="White">
+                            <Picker.Items>
+                                <x:String>Nothing</x:String>
+                                <x:String>Defender</x:String>
+                                <x:String>Scorer</x:String>
+                                <x:String>Both</x:String>
+                                <x:String>Other</x:String>
                             </Picker.Items>
                         </Picker>
                     </StackLayout>
@@ -964,9 +1021,9 @@
                 <StackLayout Orientation="Horizontal"
                              Spacing="25">
                     <StackLayout Orientation="Vertical">
-                        <Label Text="SOMETHING"
+                        <Label Text="Amount Of Opposing Defense?"
                                TextColor="White"
-                               FontSize="24" />
+                               FontSize="20" />
                         <Picker x:Name="DefendedAmountPicker"
                                 WidthRequest="100"
                                 VerticalOptions="Center"
@@ -981,9 +1038,9 @@
                         </Picker>
                     </StackLayout>
                     <StackLayout Orientation="Vertical">
-                        <Label Text="SOMETHING"
+                        <Label Text="Strength Of Opposing Defense?"
                                TextColor="White"
-                               FontSize="24" />
+                               FontSize="20" />
                         <Picker x:Name="DefendedSkillPicker"
                                 WidthRequest="100"
                                 VerticalOptions="Center"
@@ -999,6 +1056,49 @@
                             </Picker.Items>
                         </Picker>
                     </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="25">
+
+
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Amount Of Defense Played?"
+                               TextColor="White"
+                               FontSize="20" />
+                        <Picker x:Name="DefenseAmountPicker"
+                                WidthRequest="100"
+                                VerticalOptions="Center"
+                                FontSize="24"
+                                TextColor="Black"
+                                BackgroundColor="White">
+                            <Picker.Items>
+                                <x:String>None</x:String>
+                                <x:String>Some</x:String>
+                                <x:String>A lot</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Strength Of Defense Played?"
+                               TextColor="White"
+                               FontSize="20" />
+                        <Picker x:Name="DefenseSkillPicker"
+                                WidthRequest="100"
+                                VerticalOptions="Center"
+                                FontSize="24"
+                                TextColor="Black"
+                                BackgroundColor="White">
+                            <Picker.Items>
+                                <x:String>N/A</x:String>
+                                <x:String>Bad</x:String>
+                                <x:String>Okay</x:String>
+                                <x:String>Good</x:String>
+                                <x:String>Excellent</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+
+
+
                 </StackLayout>
                 
             </StackLayout>
