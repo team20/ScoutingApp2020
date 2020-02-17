@@ -5,18 +5,18 @@ using System.IO;
 namespace ScoutingApp2020 {
 	public class DataHandler {
 		//START
-		public string ScoutName { get; set; } = "";
-		public int MatchNumber { get; set; } = 0;
-		public bool ReplayMatch { get; set; } = false;
-		public int TeamNumber { get; set; } = 0;
-		public string AllianceColor { get; set; } = "";
-		public int StartPosition { get; set; } = 0;
-		public int Preloaded { get; set; } = 0;
+		public string ScoutName { get; set; }
+		public int MatchNumber { get; set; }
+		public bool ReplayMatch { get; set; }
+		public int TeamNumber { get; set; }
+		public string AllianceColor { get; set; }
+		public int StartPosition { get; set; }
+		public int Preloaded { get; set; }
 		//AUTO
-		public bool InitLine { get; set; } = false;
-		public int AutoInner { get; set; } = 0;
-		public int AutoOuter { get; set; } = 0;
+		public bool InitLine { get; set; }
 		public int AutoLower { get; set; } = 0;
+		public int AutoOuter { get; set; } = 0;
+		public int AutoInner { get; set; } = 0;
 		public int AutoMissed { get; set; } = 0;
 		public int AutoDropped { get; set; } = 0;
 		public int AutoCollected { get; set; } = 0;
@@ -30,23 +30,23 @@ namespace ScoutingApp2020 {
 		public int TeleMissed { get; set; } = 0;
 		public int TeleDropped { get; set; } = 0;
 		public int TeleCollected { get; set; } = 0;
-		public bool PositionControl { get; set; } = false;
-		public bool RotationControl { get; set; } = false;
+		public bool PositionControl { get; set; }
+		public bool RotationControl { get; set; }
 		//ENDGAME
-		public int Zone { get; set; } = 0;
-		public bool Park { get; set; } = false;
-		public bool ClimbAttempt { get; set; } = false;
-		public bool ClimbSuccess { get; set; } = false;
-		public bool ClimbBalanced { get; set; } = false;
-		public bool HadAssistance { get; set; } = false;
-		public bool AssistedOthers { get; set; } = false;
-		public int DefensePlay { get; set; } = 0;
-		public int DefensePlayStrength { get; set; } = 0;
-		public int DefenseAgainst { get; set; } = 0;
-		public int DefenseAgainstStrength { get; set; } = 0;
-		public int Role { get; set; } = 0;
-		public string Breakdown { get; set; } = "";
-		public string Comments { get; set; } = "";
+		public int Zone { get; set; }
+		public bool Park { get; set; }
+		public bool ClimbAttempt { get; set; }
+		public bool ClimbSuccess { get; set; }
+		public bool ClimbBalanced { get; set; }
+		public bool HadAssistance { get; set; }
+		public bool AssistedOthers { get; set; }
+		public int DefensePlay { get; set; }
+		public int DefensePlayStrength { get; set; }
+		public int DefenseAgainst { get; set; }
+		public int DefenseAgainstStrength { get; set; }
+		public string Role { get; set; }
+		public string Breakdown { get; set; }
+		public string Comments { get; set; }
 
 		private readonly string _filePath;
 		private readonly string _fileName;
@@ -62,12 +62,12 @@ namespace ScoutingApp2020 {
 		/// <param name="fileName">Name of Full Data text file.</param>
 		public DataHandler(string filePath, string fileName) {
 			_filePath = filePath;
-			_fileName = fileName + "_" + BluetoothAdapter.DefaultAdapter.Name.Replace(' ', '_');
+			_fileName = fileName + "_" + BluetoothAdapter.DefaultAdapter.Name.Replace(' ', '_').ToLowerInvariant();
 			if (!Directory.Exists("/storage/emulated/0/Download/ScoutingData"))
 				Directory.CreateDirectory("/storage/emulated/0/Download/ScoutingData");
 			if (!File.Exists(_filePath + _fileName + ".sqlite")) {
 				File.Create(_filePath + _fileName + ".sqlite");
-				SqliteConnection connection = new SqliteConnection("Data Source = " + _filePath + _fileName + ".sqlite");
+				SqliteConnection connection = new SqliteConnection("Data Source = " + _filePath + _fileName + ".sqlite; Version=3;");
 				connection.Open();
 				StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("CreateStatement.txt"));
 				string createStatement = streamReader.ReadToEnd();
@@ -228,8 +228,8 @@ namespace ScoutingApp2020 {
 				DefenseAgainst + ", " +
 				DefenseAgainstStrength + ", " +
 				Fouls + ", " +
-				Role + ", " +
-				Breakdown + ", " +
+				"'" + Role + "', " +
+				"'" + Breakdown + "', " +
 				"'" + Comments + "'" +
 			");";
 		}
@@ -238,7 +238,7 @@ namespace ScoutingApp2020 {
 		/// Inserts data into SQLite database.
 		/// </summary>
 		public void WriteToDatabase() {
-			SqliteConnection connection = new SqliteConnection("Data Source = " + _filePath + _fileName + ".sqlite");
+			SqliteConnection connection = new SqliteConnection("Data Source = " + _filePath + _fileName + ".sqlite; Version=3;");
 			connection.Open();
 			SqliteCommand command = new SqliteCommand(_query, connection);
 			command.ExecuteNonQuery();

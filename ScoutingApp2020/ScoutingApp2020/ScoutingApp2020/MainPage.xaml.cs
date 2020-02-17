@@ -5,8 +5,8 @@ using Xamarin.Forms;
 
 namespace ScoutingApp2020 {
 	public partial class MainPage : TabbedPage {
-
 		#region Main
+
 		private readonly DataHandler _data;
 		private const int MAX = 99;
 		private const int MIN = 0;
@@ -41,7 +41,7 @@ namespace ScoutingApp2020 {
 			ReplayMatch.IsToggled = false;
 			TeamNumber.Text = "";
 			AllianceColorPicker.SelectedIndex = -1;
-			StartPosition.Text= "";
+			StartPosition.Text = "";
 			Preloaded.Text = "";
 			// auto
 			InitLine.IsToggled = false;
@@ -61,20 +61,40 @@ namespace ScoutingApp2020 {
 			RotationControl.IsToggled = false;
 			PositionControl.IsToggled = false;
 			// endgame
-			// TODO: fix climb pickers
+			ZoneAttemptedPicker.SelectedIndex = -1;
+			ClimbAttemptedSwitch.IsToggled = false;
+			ClimbSuccessSwitch.IsToggled = false;
+			ClimbBalancedSwitch.IsToggled = false;
 			EndHelped.IsToggled = false;
 			EndAssist.IsToggled = false;
 			DefenseAmountPicker.SelectedIndex = -1;
 			DefenseSkillPicker.SelectedIndex = -1;
 			DefendedAmountPicker.SelectedIndex = -1;
 			DefendedSkillPicker.SelectedIndex = -1;
+			Fouls.Text = "0";
 			BreakdownPicker.SelectedIndex = -1;
 			CommentsEntry.Text = "";
+			// data handler variables
+			_data.AutoLower = 0;
+			_data.AutoOuter = 0;
+			_data.AutoInner = 0;
+			_data.AutoMissed = 0;
+			_data.AutoDropped = 0;
+			_data.AutoCollected = 0;
+			_data.TeleLower = 0;
+			_data.TeleOuter = 0;
+			_data.TeleInner = 0;
+			_data.TeleMissed = 0;
+			_data.TeleDropped = 0;
+			_data.TeleCollected = 0;
+			_data.Fouls = 0;
 		}
 
-		
+		#endregion
 
-		private void teamNoEntry_Unfocused(object sender, FocusEventArgs e) {
+		#region Start
+
+		private void TeamNumber_Unfocused(object sender, FocusEventArgs e) {
 			bool valid = false;
 			foreach (string team in _teams)
 				if (TeamNumber.Text == team || TeamNumber.Text == "") {
@@ -86,9 +106,11 @@ namespace ScoutingApp2020 {
 				TeamNumber.Focus();
 			}
 		}
+
 		#endregion
 
 		#region Auto
+
 		//AUTO INNER MINUS
 		private void AutoInnerMinus_Clicked(object sender, EventArgs e) {
 			if (_data.AutoInner > MIN) {
@@ -172,9 +194,11 @@ namespace ScoutingApp2020 {
 				AutoCollected.Text = (++_data.AutoCollected).ToString();
 			}
 		}
+
 		#endregion
 
-		#region Tele
+		#region Teleop
+
 		//Tele INNER MINUS
 		private void TeleInnerMinus_Clicked(object sender, EventArgs e) {
 			if (_data.TeleInner > MIN) {
@@ -259,12 +283,9 @@ namespace ScoutingApp2020 {
 			}
 		}
 
-
-
-
 		#endregion
 
-		#region End
+		#region Endgame
 
 		private void FoulsMinus_Clicked(object sender, EventArgs e) {
 			if (_data.Fouls > MIN) {
@@ -277,28 +298,46 @@ namespace ScoutingApp2020 {
 				Fouls.Text = (++_data.Fouls).ToString();
 			}
 		}
+
 		#endregion
-		private async void Button_Clicked(object sender, EventArgs e) {
+
+		private async void SubmitButton_Clicked(object sender, EventArgs e) {
 			if (ScoutName.Text == "" ||
 				MatchNumber.Text == "" ||
 				TeamNumber.Text == "" ||
-				AllianceColorPicker.SelectedIndex == -1||
-				StartPosition.Text == "" || 
-				Preloaded.Text==""||
-				ClimbZoneAttemptedPicker.SelectedIndex == -1 ||
-				ClimbZoneAchievedPicker.SelectedIndex == -1 ||
+				AllianceColorPicker.SelectedIndex == -1 ||
+				StartPosition.Text == "" ||
+				Preloaded.Text == "" ||
+				ZoneAttemptedPicker.SelectedIndex == -1 ||
 				BreakdownPicker.SelectedIndex == -1 ||
+				RolePicker.SelectedIndex == -1 ||
+				DefenseAmountPicker.SelectedIndex == -1 ||
+				DefenseSkillPicker.SelectedIndex == -1 ||
+				DefendedAmountPicker.SelectedIndex == -1 ||
+				DefendedSkillPicker.SelectedIndex == -1 ||
 				NewFilePicker.SelectedIndex == -1)
 				await DisplayAlert("Error", "Not all data entries are filled", "OK");
 			else {
 				_data.ScoutName = ScoutName.Text;
 				_data.MatchNumber = int.Parse(MatchNumber.Text);
+				_data.ReplayMatch = ReplayMatch.IsToggled;
 				_data.TeamNumber = int.Parse(TeamNumber.Text);
 				_data.AllianceColor = (string)AllianceColorPicker.SelectedItem;
 				_data.StartPosition = int.Parse(StartPosition.Text);
 				_data.Preloaded = int.Parse(Preloaded.Text);
-				// TODO: fix climb options
+				_data.InitLine = InitLine.IsToggled;
+				_data.RotationControl = RotationControl.IsToggled;
+				_data.PositionControl = PositionControl.IsToggled;
+				_data.Zone = ZoneAttemptedPicker.SelectedIndex;
+				_data.ClimbAttempt = ClimbAttemptedSwitch.IsToggled;
+				_data.ClimbSuccess = ClimbSuccessSwitch.IsToggled;
+				_data.ClimbBalanced = ClimbBalancedSwitch.IsToggled;
 				_data.Breakdown = (string)BreakdownPicker.SelectedItem;
+				_data.Role = (string)RolePicker.SelectedItem;
+				_data.DefensePlay = DefenseAmountPicker.SelectedIndex;
+				_data.DefensePlayStrength = DefenseSkillPicker.SelectedIndex;
+				_data.DefenseAgainst = DefendedAmountPicker.SelectedIndex;
+				_data.DefenseAgainstStrength = DefendedSkillPicker.SelectedIndex;
 				_data.Comments = CommentsEntry.Text;
 
 				_data.BuildQuery();
