@@ -5,8 +5,8 @@ using Xamarin.Forms;
 
 namespace ScoutingApp2020 {
 	public partial class MainPage : TabbedPage {
-
 		#region Main
+
 		private readonly DataHandler _data;
 		private const int MAX = 99;
 		private const int MIN = 0;
@@ -41,7 +41,7 @@ namespace ScoutingApp2020 {
 			ReplayMatch.IsToggled = false;
 			TeamNumber.Text = "";
 			AllianceColorPicker.SelectedIndex = -1;
-			StartPosition.Text= "";
+			StartPosition.Text = "";
 			Preloaded.Text = "";
 			// auto
 			InitLine.IsToggled = false;
@@ -72,9 +72,11 @@ namespace ScoutingApp2020 {
 			CommentsEntry.Text = "";
 		}
 
-		
+		#endregion
 
-		private void teamNoEntry_Unfocused(object sender, FocusEventArgs e) {
+		#region Start
+
+		private void TeamNumber_Unfocused(object sender, FocusEventArgs e) {
 			bool valid = false;
 			foreach (string team in _teams)
 				if (TeamNumber.Text == team || TeamNumber.Text == "") {
@@ -86,9 +88,11 @@ namespace ScoutingApp2020 {
 				TeamNumber.Focus();
 			}
 		}
+
 		#endregion
 
 		#region Auto
+
 		//AUTO INNER MINUS
 		private void AutoInnerMinus_Clicked(object sender, EventArgs e) {
 			if (_data.AutoInner > MIN) {
@@ -172,9 +176,11 @@ namespace ScoutingApp2020 {
 				AutoCollected.Text = (++_data.AutoCollected).ToString();
 			}
 		}
+
 		#endregion
 
-		#region Tele
+		#region Teleop
+
 		//Tele INNER MINUS
 		private void TeleInnerMinus_Clicked(object sender, EventArgs e) {
 			if (_data.TeleInner > MIN) {
@@ -259,12 +265,9 @@ namespace ScoutingApp2020 {
 			}
 		}
 
-
-
-
 		#endregion
 
-		#region End
+		#region Endgame
 
 		private void FoulsMinus_Clicked(object sender, EventArgs e) {
 			if (_data.Fouls > MIN) {
@@ -277,8 +280,10 @@ namespace ScoutingApp2020 {
 				Fouls.Text = (++_data.Fouls).ToString();
 			}
 		}
+
 		#endregion
-		private async void Button_Clicked(object sender, EventArgs e) {
+
+		private async void SubmitButton_Clicked(object sender, EventArgs e) {
 			if (ScoutName.Text == "" ||
 				MatchNumber.Text == "" ||
 				TeamNumber.Text == "" ||
