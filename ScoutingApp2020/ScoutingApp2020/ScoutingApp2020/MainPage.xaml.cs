@@ -73,7 +73,9 @@ namespace ScoutingApp2020 {
 			DefendedSkillPicker.SelectedIndex = -1;
 			Fouls.Text = "0";
 			BreakdownPicker.SelectedIndex = -1;
+			RolePicker.SelectedIndex = -1;
 			CommentsEntry.Text = "";
+			NewFilePicker.SelectedIndex = 1;
 			// data handler variables
 			_data.AutoLower = 0;
 			_data.AutoOuter = 0;
@@ -97,7 +99,7 @@ namespace ScoutingApp2020 {
 		private void TeamNumber_Unfocused(object sender, FocusEventArgs e) {
 			bool valid = false;
 			foreach (string team in _teams)
-				if (TeamNumber.Text == team || TeamNumber.Text == "") {
+				if (TeamNumber.Text == team || string.IsNullOrWhiteSpace(TeamNumber.Text)) {
 					valid = true;
 					break;
 				}
@@ -302,12 +304,12 @@ namespace ScoutingApp2020 {
 		#endregion
 
 		private async void SubmitButton_Clicked(object sender, EventArgs e) {
-			if (ScoutName.Text == "" ||
-				MatchNumber.Text == "" ||
-				TeamNumber.Text == "" ||
+			if (string.IsNullOrWhiteSpace(ScoutName.Text) ||
+				string.IsNullOrWhiteSpace(MatchNumber.Text) ||
+				string.IsNullOrWhiteSpace(TeamNumber.Text) ||
 				AllianceColorPicker.SelectedIndex == -1 ||
-				StartPosition.Text == "" ||
-				Preloaded.Text == "" ||
+				string.IsNullOrWhiteSpace(StartPosition.Text) ||
+				string.IsNullOrWhiteSpace(Preloaded.Text) ||
 				ZoneAttemptedPicker.SelectedIndex == -1 ||
 				BreakdownPicker.SelectedIndex == -1 ||
 				RolePicker.SelectedIndex == -1 ||
