@@ -33,9 +33,9 @@ namespace ScoutingApp2020 {
 		public bool PositionControl { get; set; } = false;
 		public bool RotationControl { get; set; } = false;
 		//ENDGAME
+		public int Zone { get; set; } = 0;
 		public bool Park { get; set; } = false;
 		public bool ClimbAttempt { get; set; } = false;
-		public int ClimbZone { get; set; } = 0;
 		public bool ClimbSuccess { get; set; } = false;
 		public bool ClimbBalanced { get; set; } = false;
 		public bool HadAssistance { get; set; } = false;
@@ -111,7 +111,7 @@ namespace ScoutingApp2020 {
 				PositionControl + separator +
 				Park + separator +
 				ClimbAttempt + separator +
-				ClimbZone + separator +
+				Zone + separator +
 				ClimbSuccess + separator +
 				ClimbBalanced + separator +
 				HadAssistance + separator +
@@ -179,7 +179,7 @@ namespace ScoutingApp2020 {
 				nameof(PositionControl) + ", " +
 				nameof(Park) + ", " +
 				nameof(ClimbAttempt) + ", " +
-				nameof(ClimbZone) + ", " +
+				nameof(Zone) + ", " +
 				nameof(ClimbSuccess) + ", " +
 				nameof(ClimbBalanced) + ", " +
 				nameof(HadAssistance) + ", " +
@@ -218,7 +218,7 @@ namespace ScoutingApp2020 {
 				PositionControl + ", " +
 				Park + ", " +
 				(ClimbAttempt ? 1 : 0) + ", " +
-				ClimbZone + ", " +
+				Zone + ", " +
 				(ClimbSuccess ? 1 : 0) + ", " +
 				(ClimbBalanced ? 1 : 0) + ", " +
 				(HadAssistance ? 1 : 0) + ", " +
